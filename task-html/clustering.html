@@ -1,0 +1,93 @@
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<style>
+
+</style>
+
+<crowd-form>
+  <short-instructions>
+    Please assign a label to each of the 4 entries in the table according to the following criteria:
+    <b>Entries that refer to the same entity have the same label</b>.
+  </short-instructions>
+  
+  <full-instructions>
+    <p class="text-center">Please assign a label to each of the 4 entries in the table according to the following criteria:</p>
+    <p class="text-center font-weight-bold">Entries that refer to the same entity have the same label</p>
+    <p class="text-center">If none of the entries overlap, that is, if all the entries refer to different entities, please assign
+    each a different label.</p>
+  </full-instructions>
+
+  <h1>Which entries on the table are the same?</h1>
+
+  <div class="container-fluid mt-5">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th style="width: 15%" scope="col">Label</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">
+                    <select name="label_1" style="font-size: large" required>
+                        <option value="">(Please select)</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    <select name="label_2" style="font-size: large" required>
+                        <option value="">(Please select)</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    <select name="label_3" style="font-size: large" required>
+                        <option value="">(Please select)</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </th>
+                <td>Larry the Bird</td>
+                <td>Thor</td>
+                <td>@twitter</td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    <select name="label_4" style="font-size: large" required>
+                        <option value="">(Please select)</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </th>
+                <td>Larry the Thor</td>
+                <td>Thor</td>
+                <td>@twitter</td>
+            </tr>
+        </tbody>
+    </table>
+  </div>
+</crowd-form>
