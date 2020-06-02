@@ -1,0 +1,54 @@
+<!-- You must include this JavaScript file -->
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- For the full list of available Crowd HTML Elements and their input/output documentation,
+      please refer to https://docs.aws.amazon.com/sagemaker/latest/dg/sms-ui-template-reference.html -->
+
+<!-- You must include crowd-form so that your task submits answers to MTurk -->
+<crowd-form answer-format="flatten-objects">
+
+    <!-- The crowd-classifier element will create a tool for the Worker to select the
+           correct answer to your question -->
+      <div class="row">
+        <div class="col-6">Select the item in the right column that is most similar</div>
+        <div class="col-6">Items to Match With</div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <label for="item1">{$item1}</label>
+          <select name="item1" id="item1">
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select> 
+        </div>
+        <div class="col-6">1. ${item3}</div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <label for="item2">{$item2}</label>
+          <select name="item2" id="item1">
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select> 
+        </div>
+        <div class="col-6">2. ${item4}</div>
+      </div>
+
+       <!-- Use the short-instructions section for quick instructions that the Worker
+              will see while working on the task. Including some basic examples of 
+              good and bad answers here can help get good results. You can include 
+              any HTML here. -->
+      <short-instructions>
+        Match the items in left column with an item in the right column if the two items are the same.
+      </short-instructions>
+      <!-- Use the full-instructions section for more detailed instructions that the 
+            Worker can open while working on the task. Including more detailed 
+            instructions and additional examples of good and bad answers here can
+            help get good results. You can include any HTML here. -->
+      <full-instructions>
+        <p>Read the task carefully and inspect the items.</p>
+        <p>Select whether the two items are the same.</p>
+      </full-instructions>
+
+</crowd-form>

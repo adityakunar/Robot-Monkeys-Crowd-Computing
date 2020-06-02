@@ -12,11 +12,11 @@
            correct answer to your question -->
     <crowd-classifier 
       name="equal"
-      categories="['Yes', 'No', 'Cannot Determine']"
+      categories="['Yes', 'No']"
       header="Are these two items the same?"
     >
         <classification-target>
-            <div class="col-md-12">
+            <div>
                 <h3>Item 1</h3>
 	      	<p>
                 ${item2}</a>
@@ -45,8 +45,6 @@
       <full-instructions>
         <p>Read the task carefully and inspect the items.</p>
         <p>Select whether the two items are the same.</p>
-        <p>If you're not sure, select Cannot Determine.</p>
       </full-instructions>
-
     </crowd-classifier>
 </crowd-form>
