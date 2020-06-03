@@ -1,93 +1,74 @@
 <script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-<style>
-
+<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" rel="stylesheet" />
+<style type="text/css">
 </style>
+<crowd-form> <short-instructions> Please assign a label to each of the 4 records in the table according to the following criteria: <b>Records that refer to the same entity have the same label</b>. </short-instructions> <full-instructions>
+<p class="text-left">Please assign a label to each of the 4 records in the table according to the following criteria:</p>
 
-<crowd-form>
-  <short-instructions>
-    Please assign a label to each of the 4 entries in the table according to the following criteria:
-    <b>Entries that refer to the same entity have the same label</b>.
-  </short-instructions>
-  
-  <full-instructions>
-    <p class="text-center">Please assign a label to each of the 4 entries in the table according to the following criteria:</p>
-    <p class="text-center font-weight-bold">Entries that refer to the same entity have the same label</p>
-    <p class="text-center">If none of the entries overlap, that is, if all the entries refer to different entities, please assign
-    each a different label.</p>
-  </full-instructions>
+<p class="text-center font-weight-bold text-light bg-danger">Records that refer to the same entity have the same label</p>
 
-  <h1>Which entries on the table are the same?</h1>
+<p class="text-left">If none of the records overlap, that is, if all the records refer to different entities, please assign each a different label.</p>
 
-  <div class="container-fluid mt-5">
+<div class="container-fluid mt-5 border">
+    <p class="text-left text-info">Here's an example of the desired output for a task of this type:</p>
     <table class="table table-striped">
         <thead class="thead-dark">
             <tr>
-                <th style="width: 15%" scope="col">Label</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col" style="width: 15%">Label</th>
+                <th scope="col">Record</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th scope="row">
-                    <select name="label_1" style="font-size: large" required>
-                        <option value="">(Please select)</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                    </select>
-                </th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <th scope="row">1</th>
+                <td>Pride (A Love) Deeper</td>
             </tr>
             <tr>
-                <th scope="row">
-                    <select name="label_2" style="font-size: large" required>
-                        <option value="">(Please select)</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                    </select>
-                </th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
+                <th scope="row">1</th>
+                <td>002-Pride_(A_Deeper_Love)</td>
             </tr>
             <tr>
-                <th scope="row">
-                    <select name="label_3" style="font-size: large" required>
-                        <option value="">(Please select)</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                    </select>
-                </th>
-                <td>Larry the Bird</td>
-                <td>Thor</td>
-                <td>@twitter</td>
+                <th scope="row">1</th>
+                <td>Pride (A Deeper Love) (Barefoot)</td>
             </tr>
             <tr>
-                <th scope="row">
-                    <select name="label_4" style="font-size: large" required>
-                        <option value="">(Please select)</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                    </select>
-                </th>
-                <td>Larry the Thor</td>
-                <td>Thor</td>
-                <td>@twitter</td>
+                <th scope="row">2</th>
+                <td>Attack in Black - Come What May</td>
             </tr>
         </tbody>
     </table>
-  </div>
+    <p class="text-left text-muted">You could assign the labels differently. The important thing is that the 3 first items have the same label since they refer to the same thing.</p>
+</div>
+</full-instructions>
+
+<h1>Which records on the table are the same?</h1>
+
+<div class="container-fluid mt-5">
+<table class="table table-striped">
+	<thead class="thead-dark">
+		<tr>
+			<th scope="col" style="width: 15%">Label</th>
+			<th scope="col">Record</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="row"><select name="label_1" required="" style="font-size: large"><option value="">(Please select)</option><option>1</option><option>2</option><option>3</option><option>4</option> </select></th>
+			<td>${Record1}</td>
+		</tr>
+		<tr>
+			<th scope="row"><select name="label_2" required="" style="font-size: large"><option value="">(Please select)</option><option>1</option><option>2</option><option>3</option><option>4</option> </select></th>
+			<td>${Record2}</td>
+		</tr>
+		<tr>
+			<th scope="row"><select name="label_3" required="" style="font-size: large"><option value="">(Please select)</option><option>1</option><option>2</option><option>3</option><option>4</option> </select></th>
+			<td>${Record3}</td>
+		</tr>
+		<tr>
+			<th scope="row"><select name="label_4" required="" style="font-size: large"><option value="">(Please select)</option><option>1</option><option>2</option><option>3</option><option>4</option> </select></th>
+			<td>${Record4}</td>
+		</tr>
+	</tbody>
+</table>
+</div>
 </crowd-form>
