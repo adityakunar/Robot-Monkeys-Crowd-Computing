@@ -10,29 +10,79 @@
 
     <!-- The crowd-classifier element will create a tool for the Worker to select the
            correct answer to your question -->
-      <div class="row">
+      <div class="row" style="margin-bottom: 10px;">
         <div class="col-6">Select the item in the right column that is most similar</div>
         <div class="col-6">Items to Match With</div>
       </div>
-      <div class="row">
+      <div class="row" style="margin-bottom: 10px;">
         <div class="col-6">
-          <label for="item1">{$item1}</label>
-          <select name="item1" id="item1">
+          <label for="item0">${C0}</label>
+          <select name="item0" id="item0">
+            <option value="None">No Matches</option>
             <option value="1">1</option>
             <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
           </select> 
         </div>
-        <div class="col-6">1. ${item3}</div>
+        <div class="col-6">1. ${C5}</div>
       </div>
-      <div class="row">
+      <div class="row" style="margin-bottom: 10px;">
         <div class="col-6">
-          <label for="item2">{$item2}</label>
-          <select name="item2" id="item1">
+          <label for="item1">${C1}</label>
+          <select name="item1" id="item1">
+            <option value="None">No Matches</option>
             <option value="1">1</option>
             <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
           </select> 
         </div>
-        <div class="col-6">2. ${item4}</div>
+        <div class="col-6">2. ${C6}</div>
+      </div>
+      <div class="row" style="margin-bottom: 10px;">
+        <div class="col-6">
+          <label for="item2">${C2}</label>
+          <select name="item2" id="item2">
+            <option value="None">No Matches</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select> 
+        </div>
+        <div class="col-6">3. ${C7}</div>
+      </div>
+      <div class="row" style="margin-bottom: 10px;">
+        <div class="col-6">
+          <label for="item3">${C3}</label>
+          <select name="item3" id="item3">
+            <option value="None">No Matches</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select> 
+        </div>
+        <div class="col-6">4. ${C8}</div>
+      </div>
+      <div class="row" style="margin-bottom: 10px;">
+        <div class="col-6">
+          <label for="item4">${C4}</label>
+          <select name="item4" id="item4">
+            <option value="None">No Matches</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select> 
+        </div>
+        <div class="col-6">5. ${C9}</div>
       </div>
 
        <!-- Use the short-instructions section for quick instructions that the Worker
@@ -40,7 +90,8 @@
               good and bad answers here can help get good results. You can include 
               any HTML here. -->
       <short-instructions>
-        Match the items in left column with an item in the right column if the two items are the same.
+        Match the items in left column with an item in the right column if the two items are the same. You cannot choose an item on the right more than once.
+        It is possible for an item to have no matches.
       </short-instructions>
       <!-- Use the full-instructions section for more detailed instructions that the 
             Worker can open while working on the task. Including more detailed 
@@ -49,6 +100,7 @@
       <full-instructions>
         <p>Read the task carefully and inspect the items.</p>
         <p>Select whether the two items are the same.</p>
+        <p>If an item has no matches, select "No Matches"</p>
       </full-instructions>
 
 </crowd-form>
